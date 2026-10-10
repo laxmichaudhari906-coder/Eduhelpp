@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "User": {
+      "path": "users/{uid}",
+      "fields": {
+        "uid": "string",
+        "displayName": "string",
+        "email": "string",
+        "paired_room_id": "string",
+        "paired_id": "string",
+        "fcmToken": "string",
+        "updatedAt": "timestamp"
+      }
+    },
+    "StudyPair": {
+      "path": "pairs/{pairId}",
+      "fields": {
+        "pairId": "string",
+        "users": "array",
+        "status": "string",
+        "pairedRoomId": "string",
+        "isPurged": "boolean",
+        "lastActiveTimestamp": "number"
+      }
+    },
+    "ChatMessage": {
+      "path": "rooms/{roomId}/messages/{messageId}",
+      "fields": {
+        "id": "string",
+        "roomId": "string",
+        "senderId": "string",
+        "senderName": "string",
+        "text": "string",
+        "timestamp": "number",
+        "status": "string",
+        "isVoiceNote": "boolean",
+        "voiceDuration": "string",
+        "replyToSnippet": "string",
+        "replyToSender": "string"
+      }
+    }
+  }
+}
